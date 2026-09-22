@@ -1,6 +1,0 @@
-yfinance
-pandas
-numpy
-FinMind
-requests
-schedule
