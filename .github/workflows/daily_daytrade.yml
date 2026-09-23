@@ -1,4 +1,4 @@
-name: 台股當沖盤後選股與 Telegram 推播
+name: 蛛網策略台股當沖選股
 
 on:
   schedule:
