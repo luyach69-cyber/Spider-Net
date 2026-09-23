@@ -149,13 +149,13 @@ def run_daily_selection():
             continue
 
     if not candidates:
-        send_telegram("📊 【盤後當沖選股】今日無符合高標準（多頭+法人連買+高波幅）標的。")
+        send_telegram("📊 【Spidernet盤後當沖選股】今日無符合高標準（多頭+法人連買+高波幅）標的。")
         return []
 
     candidates.sort(key=lambda x: x['score'], reverse=True)
     top5 = candidates[:5]
 
-    msg = f"📊 【明日當沖精選 Top 5 標的】\n日期: {datetime.now().strftime('%Y-%m-%d')}\n"
+    msg = f"📊 【Spidernet明日當沖精選 Top 5 標的】\n日期: {datetime.now().strftime('%Y-%m-%d')}\n"
     msg += "━━━━━━━━━━━━━━━━━━━\n"
     for idx, c in enumerate(top5, 1):
         target_p = round(c['close'] * 1.005, 1)
